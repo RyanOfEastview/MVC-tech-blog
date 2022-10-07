@@ -1,0 +1,41 @@
+{{!-- main handlebars is what is constant throughout the entire website --}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    {{!-- font from google font-family: 'Montserrat', sans-serif; --}}
+    <title>Tech Blog</title>
+</head>
+{{!-- Home Dashboard Login and Logout from example photo--}}
+    <div class="homepage">
+
+      {{#if loggedIn}}
+    
+        <div class="jumbotron">
+          <div class="container position-relative">
+    
+            <div>
+              <h1 id="h1-homepage"> Welcome to the Tech Blog!</h1>
+            </div>
+              <nav class="homepage-nav">
+                  <a href="/"><button type="button" class="create-button">Home Page</button></a>
+
+                  <a href="/"><button type="button" class="create-button">Dashboard</button></a>
+
+                  <a href="/"><button type="button" class="create-button">Login</button></a>
+
+                  <a href="/"><button type="button" class="create-button">Logout</button></a>
+            </nav>
+<main>
+{{!-- HandleBars --}}
+</main>
+
+</body>
+
+</html>
