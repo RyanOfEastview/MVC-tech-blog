@@ -5,18 +5,18 @@ const sequelize = require("../config/connection");
 
 // Starting here --- techBlog_db
 router.get("/", (req, res) => {
-  console.log(req.session);
+  // console.log(req.session);
 
   Post.findAll({
     // per told via TA
-    attributes: ["id", "title", "created_at", "post_content"],
+    // attributes: ["id", "title", "created_at", "post_content"],
     include: [
       {
         model: Comment,
-        attributes: [["id", "post_id", "created_at", "post_content"]],
+        // attributes: [["id", "post_id", "created_at", "post_content"]],
         inlcude: {
           model: User,
-          attributes: ["username"],
+          // attributes: ["username"],
         },
         // would like to add a socialmedia attribute as a future feature.
       },
@@ -37,18 +37,10 @@ router.get("/", (req, res) => {
 
 // login and signup
 router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
   res.render("login");
 });
 
 router.get("/signup", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
   res.render("signup");
 });
 
@@ -92,4 +84,4 @@ router.get("/post route", (req, res) => {
     });
 });
 
-module.export = router;
+module.exports = router;

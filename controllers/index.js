@@ -1,8 +1,8 @@
 // boilerplate code
 const router = require("express").Router();
-const userRoutes = require("./api");
-const userRoutes = require("./home-route");
-const userRoutes = require("./dashboard-route");
+const apiRoutes = require("./api");
+const homeRoutes = require("./home-routes");
+const dashboardRoutes = require("./dashboard-route");
 
 router.use("/api", apiRoutes);
 router.use("/", homeRoutes);

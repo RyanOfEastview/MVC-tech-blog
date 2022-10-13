@@ -1,7 +1,7 @@
 // get, post, delete
 const router = require("express").Router();
-const { Comment } = require("../models");
-const withAuth = require("../utils/authentication");
+const { Comment, Post } = require("../../models");
+const withAuth = require("../../utils/authentication");
 
 // get
 router.get("/", (req, res) => {
@@ -49,4 +49,5 @@ router.delete("/", withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
 module.exports = router;
